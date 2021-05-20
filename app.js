@@ -4,6 +4,7 @@ const express = require("express");
 const ejs = require("ejs");
 const mongoose = require("mongoose");
 const _ = require("lodash");
+const PORT = process.env.PORT || 3000;
 
 const homeStartingContent = "Welcome to the Daily Journal blog site, where you can find some of the interesting articles regarding the Web Development.";
 const aboutContent = "This is a simple blog site made with HTML, CSS, JavaScript, EJS, Nodejs and connected to the MongoDB server.";
@@ -88,6 +89,4 @@ app.get("/contact", function (req, res) {
   });
 });
 
-app.listen(3000, function () {
-  console.log("Server started on port 3000");
-});
+app.listen(PORT, () => console.log(`Listening on ${ PORT }`));
