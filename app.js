@@ -93,4 +93,4 @@ app.get("/contact", function (req, res) {
   });
 });
 
-app.listen(PORT, () => console.log("Listening on PORT " + 3000));
+app.listen(PORT, () => console.log("Listening on PORT " + PORT));
